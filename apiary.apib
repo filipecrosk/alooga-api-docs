@@ -57,7 +57,7 @@ A API utiliza os próprios Códigos de Status HTTP para indicar sucesso ou falha
     }
 ```
 
-## Products [/products{?category&checkin&checkout&latitude&longitude&page&per_page&priceFrom&priceTo&search&status}]
+## Products [/products{?[category,checkin,checkout,latitude,longitude,page,per_page,priceFrom,priceTo,search,status]}]
 Você pode listar os produtos ou fazer busca.
 
 ### List/Search all products [GET]
@@ -66,15 +66,15 @@ Você pode listar os produtos ou fazer busca.
 + Parameters
 
     + category (number, optional) - Id de uma sub-categoria
-        + Default: ``
+        + Default: 
     + checkin (string, optional) - Data inicial, ex: 19/01/2016
-        + Default: ``
+        + Default: 
     + checkout (string, optional) - Data inicial, ex: 19/01/2016
-        + Default: ``
+        + Default: 
     + latitude (float, optional) - Latitude da região a ser buscada
-        + Default: ``
+        + Default: 
     + longitude (float, optional) - Longitude da região a ser buscada
-        + Default: ``
+        + Default: 
     + page (number, optional) - Número da página para filtro
         + Default: `1`
     + per_page (number, optional) - Quantidade de registros por página
@@ -84,7 +84,7 @@ Você pode listar os produtos ou fazer busca.
     + priceTo (number, optional) - Preço do produto até esse valor
         + Default: `1000`
     + search (string, optional) - Texto da busca
-        + Default: ``
+        + Default: 
     + status (boolean, optional) - Mostra produtos inativos (apenas para usuários autenticados)
         + Default: `true`
 
