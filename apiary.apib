@@ -1,9 +1,24 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: https://api.alooga.com.br/
 
 # Alooga
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Seja bem-vindo(a) a documentação da API do Alooga.
+
+# Apresentação
+
+Nós criamos nossa API seguindo a técnica REST. Dessa forma, nossas URLs são amigáveis e previsíveis. Todas nossas APIs respondem em JSON.
+
+Todas nossas chamadas são feitas (na versão mais atual da API) na URL https://api.alooga.com.br
+
+
+# Autenticação
+
+A autenticação na API é feita através da utilização de um API Token. Cada usuário tem um Token que é enviado quando se cadastra ou loga.
+
+Para autenticar você deve passar o e-mail e o token do usuário no header de cada chamada.
+
+Todas as chamadas devem ser feitas via HTTPS e devem conter a autenticação.
 
 ## Questions Collection [/questions]
 
