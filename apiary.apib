@@ -57,6 +57,61 @@ A API utiliza os próprios Códigos de Status HTTP para indicar sucesso ou falha
     }
 ```
 
+
+# Users/user
+
+* Recuperar senha [/users/recoverypass] 
+* Atualizar senha [/users/updatepassword]
+* Link de confirmação da conta para quem recebeu email [/users/confirmation]
+* Start do login via facebook [/auth/authorized]
+* Validação de login via facebook [/users/minha-conta/confirmar/{confirmation_token}] 
+* Cadastro de usuário [/users/signup] 
+
+* Atualiza a foto [/users/{id}/photo']  
+* Envia arquivo/foto de identidade [/user/check/id']  
+* Envia arquivo/foto de cpf [/user/check/cpf']  
+* Adiciona dados bancários [/users/addBank']  
+* Adiciona cartão de crédito [/users/addCard']  
+* Atualiza apenas a senha [/users/newpassword']  
+
+# Categories /categories
+* Todos os metodos REST
+
+# Messages /messages
+* Todos os metodos REST
+
+# Reviews /reviews
+    only: [:index, :show, :create]
+# Favorites /favorites
+    only: [:index, :create, :destroy]
+# Payments Methods /payment_methods
+    Para salvar os cartões de créditos
+    only: [:index, :show, :create, :update, :destroy]
+# Payments /payments
+    only: [:index, :show, :create, :update, :destroy]
+
+# Notifications /notifications
+    only: [:index, :update]
+* Clear all POST
+    Apaga todas as notificações do usuário
+
+# Search /search
+* Apenas GET com mesmos parametros de Products
+
+# Rentals /rentals
+* Todos os metodos REST
+
+*  Aprova o aluguel [/rentals/{id}/approve] GET
+*  Recusa o aluguel [/rentals/{id}/recuse]  GET
+*  Cancela o aluguel [/rentals/{id}/cancel]  GET
+
+# Photos /photos
+    only: [:index, :create, :show, :destroy]
+* Adiciona foto ao produto [/photos/{product}] [POST]
+* Lista fotos do produto [/photos/{product}] [GET]
+* Deleta uma foto [/photos/{id}] [DELETE]
+
+
 ## Products [/products{?category,checkin,checkout,latitude,longitude,page,per_page,priceFrom,priceTo,search,status}]
 
 
@@ -172,52 +227,3 @@ Envia um hash com os parametros do produto
                     }
                 ]
             }
-
-
-## Users [/users]
-
-
-### Recuperar senha [/users/recoverypass] [POST]
-### Atualizar senha [/users/updatepassword][POST]
-### Link de confirmação da conta para quem recebeu email [/users/confirmation][POST]
-### Start do login via facebook [/auth/authorized][POST]
-### Validação de login via facebook [/users/minha-conta/confirmar/{confirmation_token}] [GET]
-### Cadastro de usuário [/users/signup] [POST]
-
-### Atualiza a foto [/users/{id}/photo']  [POST]
-### Envia arquivo/foto de identidade [/user/check/id']  [POST]
-### Envia arquivo/foto de cpf [/user/check/cpf']  [POST]
-### Adiciona dados bancários [/users/addBank']  [POST]
-### Adiciona cartão de crédito [/users/addCard']  [POST]
-### Atualiza apenas a senha [/users/newpassword']  [POST]
-
-## Categories [/categories]
-## Messages [/messages]
-## Reviews [/reviews]
-    only: [:index, :show, :create]
-## Favorites [/favorites]
-    only: [:index, :create, :destroy]
-## Payments Methods [/payment_methods]
-    Para salvar os cartões de créditos
-    only: [:index, :show, :create, :update, :destroy]
-## Payments [/payments]
-    only: [:index, :show, :create, :update, :destroy]
-
-## Notifications [/notifications]
-    only: [:index, :update]
-### Clear all [POST]
-    Apaga todas as notificações do usuário
-
-## Search [/search] [GET]
-
-## Rentals [/rentals]
-### Aprova o aluguel [/rentals/{id}/approve] [GET]
-### Recusa o aluguel [/rentals/{id}/recuse]  [GET]
-### Cancela o aluguel [/rentals/{id}/cancel]  [GET]
-
-## Photos [/photos]
-    only: [:index, :create, :show, :destroy]
-### Adiciona foto ao produto [/photos/{product}] [POST]
-### Lista fotos do produto [/photos/{product}] [GET]
-### Deleta uma foto [/photos/{id}] [DELETE]
-
