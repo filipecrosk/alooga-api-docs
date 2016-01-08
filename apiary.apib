@@ -26,23 +26,29 @@ A API utiliza os próprios Códigos de Status HTTP para indicar sucesso ou falha
 
 **Resposta de Erro**
 
-errors  ==> Pode conter tanto uma string de erro como um hash contendo o atributo e seus erros.
+```apib
+    errors  ==> Pode conter tanto uma string de erro como um hash contendo o atributo e seus erros.
+```
 
 **Ex de Erro de Autenticação (Status 401)**
 
-`{
-    "errors": "Unauthorized"
-}`
+```
+    {
+        "errors": "Unauthorized"
+    }
+```
 
 **Ex de Erro de Parâmetro (Status 422)**
 
-`{
-    "errors": {
-        "due_date": [
-            "should not be in the past"
-        ]
+```
+    {
+        "errors": {
+            "due_date": [
+                "should not be in the past"
+            ]
+        }
     }
-}`
+```
 
 ## Questions Collection [/questions]
 
