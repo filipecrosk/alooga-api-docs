@@ -22,7 +22,9 @@ Todas as chamadas devem ser feitas via HTTPS e devem conter a autenticação.
 
 ### Exemplo de header
 ```
-    **Authorization:** Token token="V7u63mYTeidFncA", email="email@domain.com"
+    
+    Authorization: Token token="V7u63mYTeidFncA", email="email@domain.com"
+
 ```
 
 # Erros
@@ -55,32 +57,57 @@ A API utiliza os próprios Códigos de Status HTTP para indicar sucesso ou falha
     }
 ```
 
-## Questions Collection [/questions]
+## Products [/products]
 
-### List All Questions [GET]
+### List all products [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
+              "products": [
+                {
+                  "category_id": 14,
+                  "user_id": 5,
+                  "id": 81,
+                  "price_centavos": 27000,
+                  "price_currency": "BRL",
+                  "status": true,
+                  "street": "RUA VERBO DIVINO",
+                  "apt": "61A T2",
+                  "city": "SAO PAULO",
+                  "state": "SP",
+                  "country": "Brazil",
+                  "zip": "04719-002",
+                  "longitude": -46.7049968,
+                  "latitude": -23.6336355,
+                  "directions": null,
+                  "name": "Relógio Bvlgari Original - Aço/Borracha/Fibra de Carbono",
+                  "description": "Relógio Bvlgari com design esportivo e arrojado.",
+                  "details": "- Pulseira de borracha ajustável;\n- Caixa em aço e fundo em fibra de carbono;\n- Automático.",
+                  "intro": null,
+                  "calendar": 2,
+                  "minimum": null,
+                  "maximum": null,
+                  "created_at": "2015-06-30T23:32:17.269-03:00",
+                  "updated_at": "2015-06-30T23:33:57.136-03:00",
+                  "views": null,
+                  "dates": null,
+                  "rental_dates": [
+                    
+                  ],
+                  "photos": [
                     {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
+                      "id": 167,
+                      "product_id": 81,
+                      "thumbnail": "https://alooga-photos.s3.amazonaws.com/uploads/products/81/thumb_3ded8676-1b16-4bba-b9da-2d8a753abb30.JPG",
+                      "image": "https://alooga-photos.s3.amazonaws.com/uploads/products/81/3ded8676-1b16-4bba-b9da-2d8a753abb30.JPG"
                     }
-                ]
-            }
+                  ],
+                  "rental_ids": [
+                    44
+                  ]
+                }
         ]
 
 ### Create a New Question [POST]
