@@ -61,15 +61,15 @@ A API utiliza os próprios Códigos de Status HTTP para indicar sucesso ou falha
 # Users/user
 
 * Recuperar senha [/users/recoverypass] [POST]
-Envia um hash com os parametros do produto
 
-+ Request (application/json)
-
+Envia um hash com os parametros do usuário
+```
         {
             "user": {
                 "email" : "email@example.com"
             }
         }
+```
 
 * Atualizar senha [/users/updatepassword] [POST]
 * Link de confirmação da conta para quem recebeu email [/users/confirmation] [POST]
